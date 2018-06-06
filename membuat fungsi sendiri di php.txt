@@ -1,0 +1,21 @@
+SCRIPT
+
+create_function.php
+
+<?php
+function write($parameter1,$parameter2,$parameter3){
+$file=$parameter1;
+$mode=$parameter2;
+$isi=$parameter3;
+$buka =fopen($file,$mode);
+fwrite($buka,$isi);
+fclose($buka);
+}
+?>
+
+fungsi.php
+
+<?php
+Include("create function.php");
+if(write("android_geeks.txt","w","content test")){echo" berhasil";}
+?>
